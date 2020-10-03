@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/main.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/node.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/node.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/sqList.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/sqList.h" charset="GBK" />
+  </component>
+</project>
