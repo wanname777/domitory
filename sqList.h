@@ -7,14 +7,9 @@
 
 #include "node.h"
 
-//typedef node elem;
-
 class sqList {
-private:
-
-
 public:
-    node *s;
+    node *s;    // Á´±í½áµã
 
     sqList();
 

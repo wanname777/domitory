@@ -4,6 +4,8 @@
 
 #include "sqList.h"
 
+#define ALL_NUMBER 700  // 宿舍总层数及人数
+
 sqList::sqList() {
     s = new node();
 }
@@ -14,7 +16,7 @@ void sqList::Insert(node &p) const {
     node *q;
     node *temp;
     q = temp = s;
-    if (p.domitoryNumber <= 0 || p.domitoryNumber >= 300) {
+    if (p.domitoryNumber <= 0 || p.domitoryNumber >= ALL_NUMBER) {
         cout << "数值错误" << endl;
         return;
     }
@@ -31,7 +33,7 @@ void sqList::Delete(int l) const {
     node *q;
     node *temp;
     q = temp = s;
-    if (l <= 0 || l >= 300) {
+    if (l <= 0 || l >= ALL_NUMBER) {
         cout << "数值错误" << endl;
         return;
     }
@@ -45,6 +47,7 @@ void sqList::Delete(int l) const {
         q = temp;
         temp = temp->next;
         q->next = temp->next;
+        delete temp;
         cout << "删除成功" << endl;
     }
 }
@@ -63,7 +66,7 @@ void sqList::Change(int l, int r) const {
     node *q;
     node *temp;
     q = temp = s;
-    if (l <= 0 || l >= 300) {
+    if (l <= 0 || l >= ALL_NUMBER) {
         cout << "数值错误" << endl;
         return;
     }
@@ -82,6 +85,10 @@ void sqList::Change(int l, int r) const {
 }
 
 void sqList::Merge(sqList &list) {
+    /*
+     * 利用链表的原有空间进行归并，结束时有一个链表会成为空链表
+     * 而另一个链表，也就是正在操纵的链表会成为归并后的链表
+     */
     node *p1;
     node *p2;
     p1 = s;
@@ -104,6 +111,6 @@ void sqList::Merge(sqList &list) {
     }
     temp_p->next = p1 ? p1 : p2;
     s = t->s;
-    list.s = new node();
+    list.s = new node();    // 这里只采用了生成空的头结点的方式来清空链表
     cout << "合并成功" << endl;
 }

@@ -10,13 +10,11 @@
 using namespace std;
 
 class node {
-private:
-
 public:
     class node *next = NULL;
 
-    int domitoryNumber;
-    int number;
+    int domitoryNumber; // ¬•≤„£®Àﬁ…·∫≈£©
+    int number; // Àﬁ…·»À ˝
 
     node();
 
@@ -26,6 +24,5 @@ public:
 
     void show_all() const;
 };
-
 
 #endif //DOMITORY_NODE_H
